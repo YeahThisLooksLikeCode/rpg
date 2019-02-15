@@ -1,0 +1,33 @@
+all:rpg
+
+rpg: main.o character.o battle.o arminv.o equipment.o choiceUI.o gear.o inventory.o items.o magic.o magobj.o weapon.o area.o
+	g++ main.o character.o battle.o arminv.o equipment.o choiceUI.o gear.o inventory.o items.o magic.o magobj.o weapon.o area.o -o rpg
+
+main.o: main.cpp
+	g++ -c main.cpp
+character.o: character.cpp 
+	g++ -c character.cpp
+battle.o: battle.cpp 
+	g++ -c battle.cpp
+arminv.o: arminv.cpp
+	g++ -c arminv.cpp
+equipment.o: equipment.cpp 
+	g++ -c equipment.cpp
+choiceUI.o: choiceUI.cpp 
+	g++ -c choiceUI.cpp
+gear.o: gear.cpp 
+	g++ -c gear.cpp
+inventory.o: inventory.cpp 
+	g++ -c inventory.cpp
+items.o: items.cpp 
+	g++ -c items.cpp 
+magic.o: magic.cpp
+	g++ -c magic.cpp
+magobj.o: magobj.cpp 
+	g++ -c magobj.cpp
+weapon.o: weapon.cpp 
+	g++ -c weapon.cpp
+area.o: area.cpp 
+	g++ -c area.cpp
+clean:
+	rm -rf *o rpg
